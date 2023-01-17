@@ -1,0 +1,28 @@
+{
+  "name": "teste-bm-to-do-list-lucassb15",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucassb15/teste-bm-to-do-list-lucassb15.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucassb15/teste-bm-to-do-list-lucassb15/issues"
+  },
+  "homepage": "https://github.com/lucassb15/teste-bm-to-do-list-lucassb15#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongodb": "^4.13.0",
+    "mongoose": "^6.8.4"
+  }
+}
