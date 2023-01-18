@@ -37,8 +37,7 @@
                                             <%= task[i].priority %>
                                         </td>
                                         <td id="dateN">
-                                            <%= new Date(task[i].dateExpiration).getDate() - new Date().getDate() %>
-                                                Dias
+                                            <%= task[i].dateExpiration %>
                                         </td>
                                         <td>
                                             <%= task[i].executionStep %>
