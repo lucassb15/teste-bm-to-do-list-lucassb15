@@ -10,6 +10,13 @@
         background-color: #181818;
     }
 
+    #section-cad a {
+        text-decoration: none;
+        text-align: center;
+        padding: .5rem;
+        border-radius: .4rem;
+    }
+
     label {
         color: #eef0f6;
         font-size: 1.1rem;
@@ -76,6 +83,7 @@
         display: flex;
         flex-direction: column;
     }
+
     #section-cad .btn-style {
         background-color: #004641;
         color: #ddd;
@@ -83,18 +91,21 @@
         font-weight: bold;
         cursor: pointer;
     }
+
     #section-cad .btn-style:hover {
         background-color: #015e57;
     }
 
-    @media (max-width: 767px){
+    @media (max-width: 767px) {
         #section-cad .container {
-        width: 70%;
+            width: 70%;
+        }
+
+        #section-cad .title {
+            margin-bottom: 10px;
+        }
     }
-    #section-cad .title {
-        margin-bottom: 10px;
-    }
-    }
+
     /* =================== TASK =============================*/
     #section-dashboard {
         display: flex;
@@ -158,20 +169,63 @@
         justify-content: center;
         align-items: center;
     }
-    #section-dashboard .delete-btn{
-    cursor: pointer;
-    padding: .4rem;
-    border: none;
-    color: #e7e7e7;
-    background-color: rgb(138, 41, 41);
-    font-size: 12px;
-    text-align: center;
-    transition: .5s;
-    border-radius: .2rem;
-    text-align: center;
-    text-decoration: none;
+
+    #section-dashboard .delete-btn {
+        cursor: pointer;
+        padding: .4rem;
+        border: none;
+        color: #e7e7e7;
+        background-color: rgb(138, 41, 41);
+        font-size: 12px;
+        text-align: center;
+        transition: .5s;
+        border-radius: .2rem;
+        text-align: center;
+        text-decoration: none;
     }
+
     #section-dashboard .delete-btn:hover {
-    background-color: rgb(187, 26, 26);
-  }
+        background-color: rgb(187, 26, 26);
+    }
+
+    #section-dashboard .return-cad {
+        text-decoration: none;
+        text-align: center;
+        padding: .5rem;
+        border-radius: .4rem;
+    }
+
+    #section-dashboard .btn-style {
+        background-color: #004641;
+        color: #ddd;
+        width: 15%;
+        margin-top: 5px;
+        margin-left: 5px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    @media (max-width: 767px) {
+        #section-dashboard .container {
+            display: flex;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            width: min-content;
+        }
+
+        #section-dashboard {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            border-collapse: collapse;
+
+        }
+        #section-dashboard .btn-style{
+            margin-top: 10px;
+            width: 20%;
+        }
+       
+    }
 </style>

@@ -4,6 +4,12 @@
         
         <section id="section-cad">
             <div class="container">
+                <% if(typeof message !=='undefined' ){ %>
+                    <p style="color: green; text-align: center; margin-bottom: 5px; font-size: 1.2rem;">
+                        <%= message%>
+                    </p>
+                    <% } %>
+                        <% include('../layouts/footer') %>
                 <h1 class="title">Cadastro de Tarefas</h1>
                 <form action="/todoCad" method="post" class="form-box">
                     <label for="input">Título</label>
@@ -32,11 +38,7 @@
                
                     <input class="btn-style" type="submit" value="Criar nota">
                 </form>
+                <a href="/todoTask" class="btn-style">Lista de tarefas</a>
             </div>
         </section>
-        <% if(typeof message !=='undefined' ){ %>
-            <p style="color: green">
-                <%= message%>
-            </p>
-            <% } %>
-                <% include('../layouts/footer') %>
+        
