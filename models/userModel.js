@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
-const userSchema = new mongoose.Schema({
+const taskSchema = new mongoose.Schema({
    
     title: {
         type: String,
-        require: true,
+        require: true
     },
     description: {
         type: String,
@@ -12,7 +12,7 @@ const userSchema = new mongoose.Schema({
     },
     priority: {
         type: String,
-        require: true,
+        require: true
     },
     dateExpiration: {
         type: String,
@@ -22,14 +22,10 @@ const userSchema = new mongoose.Schema({
         type: String,
         require: true
     },
-    gender: {
-        type: String,
-        require: true
-    },
     createdAt: {
         type: Date,
         default: Date.now
     }
 });
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('Task', taskSchema);

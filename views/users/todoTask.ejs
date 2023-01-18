@@ -1,0 +1,56 @@
+<% include('../layouts/header') %>
+    <%- include('../layouts/css/style') %>
+        <main>
+            <section id="section-dashboard" class="section-container">
+                <div class="dash-box">
+                    <h3>TAREFAS</h3>
+                </div>
+
+                <div class="container">
+
+                    <table class="table-box">
+                        <tr>
+                            <th>ID</th>
+                            <th>Título</th>
+                            <th>Descrição</th>
+                            <th>Prioridade</th>
+                            <th>Data de expiração</th>
+                            <th>Etapa de execução</th>
+                        </tr>
+                        <!--  -->
+                        <div class="task-container">
+                            <% if(task.length> 0){
+
+                                for(let i=0; i<task.length; i++){ %>
+                                    <tr>
+                                        <td>
+                                            <%= [i] %>
+                                        </td>
+                                        <td>
+                                            <%= task[i].title %>
+                                        </td>
+                                        <td>
+                                            <%= task[i].description %>
+                                        </td>
+                                        <td>
+                                            <%= task[i].priority %>
+                                        </td>
+                                        <td id="dateN">
+                                            <%=  new Date(task[i].dateExpiration).getDate() - new Date().getDate() %> Dias
+                                        </td>
+                                        <td>
+                                            <%= task[i].executionStep %>
+                                        </td>
+                                    </tr>
+                                    
+
+                                    <% } } else{ %>
+                                        <tr>
+                                            <td colspan="5">Tarefa não encontrada</td>
+                                        </tr>
+                                        <% } %>
+                    </table>
+                </div>
+            </section>
+        </main>
+        <% include('../layouts/footer') %>

@@ -1,3 +1,42 @@
-<%= include('../layouts/header')%>
-<h1>Funcionou</h1>
-<%= include('../layouts/footer')%>
+<% include('../layouts/header') %>
+    <%- include('../layouts/css/style') %>
+
+        
+        <section id="section-cad">
+            <div class="container">
+                <h1 class="title">Cadastro de Tarefas</h1>
+                <form action="/todoCad" method="post" class="form-box">
+                    <label for="input">Título</label>
+                    <input type="text" name="title" placeholder="Digite o título da tarefa" required>
+                    
+                    <label for="textarea">Descrição</label>
+                    <textarea type="textarea" cols="15" rows="5" name="description" placeholder=" Digite uma descrição "
+                        required></textarea>
+                   
+                    <label for="select">Prioridade</label>
+                    <select name="priority" required>
+                        <option value="Alta">Alta</option>
+                        <option value="Media">Média</option>
+                        <option value="Baixa">Baixa</option>
+                    </select>
+                  
+                    <label for="input">Data de expiração</label>
+                    <input type="date" name="dateExpiration" placeholder="" required>
+                  
+                    <label for="select">Etapa de execução</label>
+                    <select name="executionStep" required>
+                        <option value="A fazer">A fazer</option>
+                        <option value="Fazendo">Fazendo</option>
+                        <option value="Feita">Feita</option>
+                    </select>
+               
+                    <input class="btn-style" type="submit" value="Criar nota">
+                </form>
+            </div>
+        </section>
+        <% if(typeof message !=='undefined' ){ %>
+            <p style="color: green">
+                <%= message%>
+            </p>
+            <% } %>
+                <% include('../layouts/footer') %>

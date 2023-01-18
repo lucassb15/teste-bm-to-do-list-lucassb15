@@ -1,0 +1,161 @@
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Open Sans';
+    }
+
+    body {
+        background-color: #181818;
+    }
+
+    label {
+        color: #eef0f6;
+        font-size: 1.1rem;
+
+        width: auto;
+        -webkit-user-select: none;
+        /* Safari */
+        -ms-user-select: none;
+        /* IE 10 and IE 11 */
+        user-select: none;
+        /* Standard syntax */
+    }
+
+    textarea:focus,
+    input:focus,
+    select:focus {
+        outline: none;
+    }
+
+    input,
+    select {
+        border: none;
+        padding: .5rem;
+        border-radius: .3rem;
+
+        margin-bottom: 20px;
+    }
+
+    textarea {
+        margin-bottom: 20px;
+        resize: none;
+        border-radius: .3rem
+    }
+
+    input:hover,
+    textarea:hover,
+    select:hover {
+        background: #cecfd1;
+
+    }
+
+    #section-cad {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    #section-cad .container {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        height: auto;
+    }
+
+    #section-cad .title {
+        color: #ddd;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    #section-cad .form-box {
+        display: flex;
+        flex-direction: column;
+    }
+    #section-cad .btn-style {
+        background-color: #004641;
+        color: #ddd;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    #section-cad .btn-style:hover {
+        background-color: #015e57;
+    }
+
+    @media (max-width: 767px){
+        #section-cad .container {
+        width: 70%;
+    }
+    #section-cad .title {
+        margin-bottom: 10px;
+    }
+    }
+    /* =================== TASK =============================*/
+    #section-dashboard {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-collapse: collapse;
+
+    }
+
+    #section-dashboard .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+    }
+
+    #section-dashboard .dash-box {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 1rem;
+        color: #f1f1f1;
+    }
+
+    #section-dashboard td,
+    #section-dashboard th {
+        border: 1px solid #ddd;
+        padding: 8px;
+        color: #f3f3f3;
+
+    }
+
+    #section-dashboard .table-box {
+        width: 50%;
+    }
+
+    #section-dashboard tr:nth-child(even) {
+        background-color: #004641;
+        color: #f1f1f1;
+    }
+
+    #section-dashboard tr:hover {
+        background-color: #008179;
+    }
+
+    #section-dashboard th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        width: auto;
+        background-color: #242424;
+        color: #f1f1f1;
+    }
+
+    #section-dashboard .align-flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
