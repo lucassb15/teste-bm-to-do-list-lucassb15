@@ -59,8 +59,23 @@ const loadToDoTask = async (req,res)=>{
 
 }
 
+const deleteTask = async (req,res)=>{
+
+    try {
+        
+        const id = req.query.id;
+        await Task.findOneAndDelete(id);
+        res.redirect('todoTask');
+       
+    } catch (error) {
+        console.log("Delete user error:  ", error.message)
+    }
+
+}
+
 module.exports = {
     loadToDoCad,
     loadToDoTask,
-    insertTask
+    insertTask,
+    deleteTask
 }

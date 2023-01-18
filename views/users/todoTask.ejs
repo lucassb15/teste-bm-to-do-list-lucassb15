@@ -16,6 +16,7 @@
                             <th>Prioridade</th>
                             <th>Data de expiração</th>
                             <th>Etapa de execução</th>
+                            <th>Ação</th>
                         </tr>
                         <!--  -->
                         <div class="task-container">
@@ -36,17 +37,21 @@
                                             <%= task[i].priority %>
                                         </td>
                                         <td id="dateN">
-                                            <%=  new Date(task[i].dateExpiration).getDate() - new Date().getDate() %> Dias
+                                            <%= new Date(task[i].dateExpiration).getDate() - new Date().getDate() %>
+                                                Dias
                                         </td>
                                         <td>
                                             <%= task[i].executionStep %>
                                         </td>
+                                        <td>
+                                            <a href="/delete-task?id=<%= task[i].id %>" class="delete-btn" >Excluir</a>
+                                        </td>
                                     </tr>
-                                    
+
 
                                     <% } } else{ %>
                                         <tr>
-                                            <td colspan="5">Tarefa não encontrada</td>
+                                            <td colspan="5">Não existe tarefas cadastradas</td>
                                         </tr>
                                         <% } %>
                     </table>

@@ -19,9 +19,12 @@ const taskController = require('../controllers/taskController');
 user_route.get('/',taskController.loadToDoCad);
 user_route.get('/todoCad',taskController.loadToDoCad);
 
-user_route.post('/todoCad',taskController.insertTask)
+user_route.post('/todoCad',taskController.insertTask);
 
 // ToDo Task
 user_route.get('/todoTask',taskController.loadToDoTask);
+
+user_route.get('/delete-task',taskController.deleteTask);
+
 
 module.exports = user_route;
